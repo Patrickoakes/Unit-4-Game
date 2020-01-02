@@ -91,81 +91,6 @@
 
     </div>
 
-    <script>
-
-        /////GLOBAL VARIABLES////
-
-        var wins = 0;
-        var losses = 0;
-
-        var bigNumRandom = null;  // 19 - 120
-
-        var c1NumRandom = null;   // 1 -12 
-        var c2NumRandom = null;
-        var c3NumRandom = null;
-        var c4NumRandom = null;
-
-
-
-        var numCounter = 0;    // click counter
-
-        function startGame() {
-
-            numCounter = 0;
-
-            bigNumRandom = Math.floor(Math.random() * 100) + 21;
-            $("#number-to-guess").text(bigNumRandom);
-            console.log(bigNumRandom);
-
-            imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-            c1NumRandom = Math.floor(Math.random() * 12 + 1);
-            console.log(c1NumRandom);
-            c2NumRandom = Math.floor(Math.random() * 12 + 1);
-            console.log(c2NumRandom);
-            c3NumRandom = Math.floor(Math.random() * 12 + 1);
-            console.log(c3NumRandom);
-            c4NumRandom = Math.floor(Math.random() * 12 + 1);
-            console.log(c4NumRandom);
-            var crystalValue = ($(this).attr("data-crystalvalue"));
-        );
-
-            $(".crystal-image").on("click", function () {
-
-
-                counter += crystalValue;
-                alert("New score: " + counter);
-
-                if (counter === targetNumber) {
-                    alert("You win!");
-                }
-
-                else if (counter >= targetNumber) {
-                    alert("You lose!!");
-                }
-
-            });
-            function roundComplete() {
-                document.getElementById("guesses-left").innerHTML = guessesLeft;
-
-                document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join(" ");
-
-                document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");
-
-                if (bandLetters.toString() === blanksAndSuccesses.toString()) {
-                    wins++;
-                    alert("You win!");
-                    document.getElementById("win-counter").innerHTML = wins;
-                    startGame();
-                }
-
-                else if (guessesLeft === 0) {
-                    losses++;
-                    alert("You lose");
-                    document.getElementById("loss-counter").innerHTML = losses;
-                    startGame();
-                }
-
-            }
 
 
 
@@ -181,7 +106,9 @@
 
 
 
-    </script>
+
+
+
 </body>
 
 </html>
