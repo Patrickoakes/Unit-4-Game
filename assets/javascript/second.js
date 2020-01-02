@@ -6,14 +6,24 @@ $(document).ready(function () {
 
     var numCounter = 0;
 
-    var totalScore = 0;
+    var bigNumRandom = Math.floor(Math.random() * 100) + 21;
+    $("#random-score").text(bigNumRandom);
 
-    var bigNumRandom = null;
+    var c1Num = $("#crystal1")
+    c1Num.attr("data-crystalvalue", Math.floor(Math.random() * 12 + 1));
+    var c2Num = $("#crystal2")
+    c2Num.attr("data-crystalvalue", Math.floor(Math.random() * 12 + 1));
+    var c3Num = $("#crystal3")
+    c3Num.attr("data-crystalvalue", Math.floor(Math.random() * 12 + 1));
+    var c4Num = $("#crystal4")
+    c4Num.attr("data-crystalvalue", Math.floor(Math.random() * 12 + 1));
 
-    var c1Num = null;
-    var c2Num = null;
-    var c3Num = null;
-    var c4Num = null;
+    $(".crystalImg").on("click", function () {
+        var crystalValue = ($(this).attr("data-crystalvalue"))
+        crystalValue = parseInt(crystalValue);
+        numCounter += crystalValue;
+        $("#totalScore").text(numCounter);
+    });
 
 
 
@@ -23,13 +33,9 @@ $(document).ready(function () {
     //    totalScore = 0;
     //    $("#totalScore, #bigNumRandom").empty();
 
-    var bigNumRandom = Math.floor(Math.random() * 100) + 21;
-    $("#random-score").text(bigNumRandom);
 
-    var c1Num = function () {
-        Math.floor(Math.random() * 12 + 1);
-        //$("crystal1") 
-    };
+
+
 
     /*    $("crystal2") = function () {
           var c2Num = Math.floor(Math.random() * 12 + 1);
@@ -46,25 +52,25 @@ $(document).ready(function () {
     // startGame();
 
 
-    $("crystal1").on("click", function () {
-        totalScore = c1Num + numCounter;
-        $("#crystal1").innerHTML = totalScore;
-    });
-
-    /* $("crystal2").on("click", function () {
-         totalScore = c2Num + numCounter;
-         $((this).text(totalScore));
+    /* $("crystal1").on("click", function () {
+         totalScore = c1Num + numCounter;
+         $("#crystal1").innerHTML = totalScore;
      });
 
-     $("crystal3").on("click", function () {
-         totalScore = c3Num + numCounter;
-         $((this).text(totalScore));
-     });
+     /* $("crystal2").on("click", function () {
+          totalScore = c2Num + numCounter;
+          $((this).text(totalScore));
+      });
 
-     $("crystal4").on("click", function () {
-         totalScore = c4Num + numCounter;
-         $((this).text(totalScore));
-     });*/
+      $("crystal3").on("click", function () {
+          totalScore = c3Num + numCounter;
+          $((this).text(totalScore));
+      });
+
+      $("crystal4").on("click", function () {
+          totalScore = c4Num + numCounter;
+          $((this).text(totalScore));
+      });*/
     if (totalScore === bigNumRandom) {
         $("#wins-loss").innerHTML = "You Win!";
         var wins = 0;
@@ -78,25 +84,3 @@ $(document).ready(function () {
     }
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-
-</html>
