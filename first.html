@@ -105,23 +105,26 @@
         var c3NumRandom = null;
         var c4NumRandom = null;
 
+
+
         var numCounter = 0;    // click counter
 
-        function startGame() {
+        // function startGame() {
 
-            numCounter = 0;
+        numCounter = 0;
 
-            bigNumRandom = Math.floor(Math.random() * 100) + 21;
-            console.log(bigNumRandom);
+        bigNumRandom = Math.floor(Math.random() * 100) + 21;
+        $("#number-to-guess").text(bigNumRandom);
+        console.log(bigNumRandom);
 
-            c1NumRandom = Math.floor(Math.random() * 12 + 1);
-            console.log(c1NumRandom);
-            c2NumRandom = Math.floor(Math.random() * 12 + 1);
-            console.log(c2NumRandom);
-            c3NumRandom = Math.floor(Math.random() * 12 + 1);
-            console.log(c3NumRandom);
-            c4NumRandom = Math.floor(Math.random() * 12 + 1);
-            console.log(c4NumRandom);
+        c1NumRandom = Math.floor(Math.random() * 12 + 1);
+        console.log(c1NumRandom);
+        c2NumRandom = Math.floor(Math.random() * 12 + 1);
+        console.log(c2NumRandom);
+        c3NumRandom = Math.floor(Math.random() * 12 + 1);
+        console.log(c3NumRandom);
+        c4NumRandom = Math.floor(Math.random() * 12 + 1);
+        console.log(c4NumRandom);
 
 
 
