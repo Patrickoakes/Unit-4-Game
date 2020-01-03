@@ -11,7 +11,7 @@ $(document).ready(function () {
         $("#random-score").text(bigNumRandom);
 
         numCounter = 0;
-
+        $("#totalScore").text(numCounter);
 
         var c1Num = $("#crystal1")
         c1Num.attr("data-crystalvalue", Math.floor(Math.random() * 12 + 1));
